@@ -1,3 +1,4 @@
+import management.Manager;
 import org.junit.Test;
 import staff.Employee;
 import techstaff.DataBaseAdmin;
@@ -21,6 +22,12 @@ public class EmployeeTest {
     public void employeeAsDataBaseAdmin(){
         employee = new DataBaseAdmin("Scott", "NI72453A", 35000);
         assertEquals("Scott", employee.getName());
+    }
+
+    @Test
+    public void employeeAsManager(){
+        employee = new Manager("Graham", "NI70473A", 60000, "Testing");
+        assertEquals("Graham", employee.getName());
     }
 
 
